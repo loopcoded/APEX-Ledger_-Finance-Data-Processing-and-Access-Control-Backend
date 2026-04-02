@@ -275,6 +275,10 @@ Authorization: Bearer <TOKEN>
 📸 Screenshot: ![alt text](image-6.png)
 
 ---
+## 🔹 8. Swagger Docs 
+
+📸 Screenshot: ![alt text](image-7.png) 
+![alt text](image-8.png)
 
 
 #  Setup Instructions

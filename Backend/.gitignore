@@ -1,9 +1,8 @@
 node_modules
 # Keep environment variables out of version control
 .env
-node_modules
+node_modules/
 prismalogs
 package-lock.json
-package.json
 path/to/your/local/.env
 /generated/prisma

@@ -5,6 +5,8 @@ import authRoutes from "./routes/auth.routes.js";
 import recordRoutes from "./routes/record.routes.js";
 import dashboardRoutes from "./routes/dashboard.routes.js";
 import { errorHandler } from "./middleware/error.middleware.js";
+import { swaggerUi, swaggerSpec } from "./config/swagger.js";
+
 dotenv.config();
 
 const app = express();
@@ -16,6 +18,7 @@ app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/records", recordRoutes);
 app.use("/api/dashboard", dashboardRoutes);
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 // Error Handler
 app.use(errorHandler);
 // Test Route

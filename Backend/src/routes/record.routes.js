@@ -1,3 +1,47 @@
+/**
+ * @swagger
+ * tags:
+ *   name: Records
+ *   description: Financial Records APIs
+ */
+
+/**
+ * @swagger
+ * /api/records:
+ *   post:
+ *     summary: Create a financial record
+ *     tags: [Records]
+ *     security:
+ *       - bearerAuth: []
+ *     responses:
+ *       201:
+ *         description: Record created
+ */
+
+/**
+ * @swagger
+ * /api/records:
+ *   get:
+ *     summary: Get records with filters
+ *     tags: [Records]
+ *     parameters:
+ *       - in: query
+ *         name: type
+ *         schema:
+ *           type: string
+ *       - in: query
+ *         name: category
+ *         schema:
+ *           type: string
+ *       - in: query
+ *         name: search
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: List of records
+ */
+
 import express from "express";
 import { create , getAll , update , remove ,} from "../controllers/record.controller.js";
 import { validate } from "../middleware/validate.middleware.js";

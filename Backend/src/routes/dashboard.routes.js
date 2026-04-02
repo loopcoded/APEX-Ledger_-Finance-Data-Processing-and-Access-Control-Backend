@@ -1,3 +1,37 @@
+/**
+ * @swagger
+ * tags:
+ *   name: Dashboard
+ *   description: Dashboard & Insights APIs
+ */
+
+/**
+ * @swagger
+ * /api/dashboard/summary:
+ *   get:
+ *     summary: Get financial summary
+ *     tags: [Dashboard]
+ *     responses:
+ *       200:
+ *         description: Summary data
+ */
+
+/**
+ * @swagger
+ * /api/dashboard/trends:
+ *   get:
+ *     summary: Get trends (monthly/weekly)
+ *     tags: [Dashboard]
+ *     parameters:
+ *       - in: query
+ *         name: groupBy
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Trends data
+ */
+
 import express from "express";
 import {
   summary,
